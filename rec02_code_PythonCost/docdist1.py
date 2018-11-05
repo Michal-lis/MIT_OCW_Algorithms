@@ -121,11 +121,7 @@ def inner_product(L1, L2):
     Inner product between two vectors, where vectors
     are represented as lists of (word,freq) pairs.
 
-    Example: inner_product([["and",3],["of",2],["the",5]],
-                           [["and",4],["in",1],["of",1],["this",2]]) = 14.0 
-    """
-    sum = 0.0
-    for word1, count1 in L1:
+    Example: inner_product([["and",3],["of",2],["the",5]]count1 in L1:
         for word2, count2 in L2:
             if word1 == word2:
                 sum += count1 * count2
@@ -133,11 +129,11 @@ def inner_product(L1, L2):
 
 
 def vector_angle(L1, L2):
-    """
+
     The input is a list of (word,freq) pairs, sorted alphabetically.
 
     Return the angle between these two vectors.
-    """
+
     numerator = inner_product(L1, L2)
     denominator = math.sqrt(inner_product(L1, L1) * inner_product(L2, L2))
     return math.acos(numerator / denominator)
