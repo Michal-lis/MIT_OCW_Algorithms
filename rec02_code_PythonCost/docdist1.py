@@ -74,7 +74,7 @@ def get_words_from_string(line):
     character_list = []  # accumulates characters in word
     for c in line:
         if c.isalnum():
-            character_list.append(c)
+            character_list.append(c)  #14
         # for preventing a double whitespace here
         elif len(character_list) > 0:
             word = "".join(character_list)
@@ -120,8 +120,8 @@ def inner_product(L1, L2):
     """
     Inner product between two vectors, where vectors
     are represented as lists of (word,freq) pairs.
-
     Example: inner_product([["and",3],["of",2],["the",5]]count1 in L1:
+
         for word2, count2 in L2:
             if word1 == word2:
                 sum += count1 * count2
@@ -159,3 +159,4 @@ def main():
 
 if __name__ == "__main__":
     cProfile.run("main()")
+"""
