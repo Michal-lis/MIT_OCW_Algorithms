@@ -4,6 +4,7 @@ import unittest
 import sys
 import glob
 import re
+import os
 from circuit2 import *
 
 class Circuit2Test(unittest.TestCase):
